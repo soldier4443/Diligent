@@ -1,1 +1,1 @@
-include ':diligent', ':diligenttest', ':diligenttest', ':testsetset'
+include ':diligent', ':diligenttest'
