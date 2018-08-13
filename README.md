@@ -1,6 +1,6 @@
 # Diligent
 
-## Purpose of this project is..
+### Purpose of this project is..
 
 - Making a handy wrapper for **Retrofit** and **RxJava2**.
 - Providing safe yet easy handling mechanism for Lifecycle
