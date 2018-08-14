@@ -11,6 +11,16 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        // Should define GITHUB_CLIENT_ID and GITHUB_CLIENT_SECRET in local.properties file.
+        Properties properties = new Properties()
+        properties.load(project.rootProject.file('local.properties').newDataInputStream())
+
+        buildConfigField "String", "GITHUB_CLIENT_ID",
+                properties.getProperty('GITHUB_CLIENT_ID') ?: "\"NOT FOUND\""
+
+        buildConfigField "String", "GITHUB_CLIENT_SECRET",
+                properties.getProperty('GITHUB_CLIENT_SECRET') ?: "\"NOT FOUND\""
     }
     buildTypes {
         release {
